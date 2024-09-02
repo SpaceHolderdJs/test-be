@@ -1,4 +1,7 @@
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -8,7 +11,7 @@ export const transporter = nodemailer.createTransport({
   },
   secure: true,
   auth: {
-    user: 'sergienko339@gmail.com',
-    pass: 'tddb ervl qpza piwy',
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD,
   },
 });
