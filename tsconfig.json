@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Use the latest ECMAScript version.
+    "module": "CommonJS", // Set the module system to CommonJS, which Node.js uses.
+    "strict": true, // Enable all strict type-checking options.
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules.
+    "skipLibCheck": true, // Skip type checking of all declaration files.
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "outDir": "./dist", // Redirect output structure to the dist directory.
+    "rootDir": "./src", // Specify the root directory of input files.
+    "moduleResolution": "node", // Specify module resolution strategy: 'node' for Node.js.
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export.
+    "resolveJsonModule": true, // Include modules importing `.json` files.
+    "types": ["node"], // Include type definitions for Node.js.
+    "typeRoots": ["./node_modules/@types"], // List of folders to include type definitions from.
+    "baseUrl": ".", // Base directory to resolve non-relative module names.
+    "paths": {
+      // Aliases for module paths.
+      "*": ["node_modules/*"],
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*.ts"], // Include all TypeScript files in the src directory.
+  "exclude": ["node_modules", "dist"] // Exclude the node_modules and dist directories.
+}
